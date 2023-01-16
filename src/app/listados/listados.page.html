@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/poliza']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>listado de Empleados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>Código</ion-col>
+    <ion-col>Nombre</ion-col>
+    <ion-col>Paterno</ion-col>
+    <ion-col>Materno</ion-col>
+    <ion-col>Sexo</ion-col>
+    <ion-col>Selecionar</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let user of empleados">
+    <ion-col> {{ user.idempleado }} </ion-col>
+    <ion-col> {{ user.nombre }} </ion-col>
+    <ion-col> {{ user.apellidop}} </ion-col>
+    <ion-col> {{ user.apellidom}} </ion-col>
+    <ion-col> {{ user.sexo}} </ion-col>
+    <ion-col > <ion-icon name="checkmark-done-outline"></ion-icon> </ion-col>
+  </ion-row>
+</ion-content>
